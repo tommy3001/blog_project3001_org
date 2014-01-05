@@ -1,0 +1,12 @@
+{% extends "!layout.html" %}
+
+
+
+{% block relbar1 %}
+
+{{ super() }}
+{% endblock %}
+
+{# put the sidebar before the body #}
+{% block sidebar1 %}{{ sidebar() }}{% endblock %}
+{% block sidebar2 %}{% endblock %}
