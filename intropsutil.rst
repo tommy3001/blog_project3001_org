@@ -12,7 +12,6 @@ I wrote a small Python script to be ready for the next Mars invasion. It is runn
 `Smtplib <http://docs.python.org/3/library/smtplib.html>`_   is the python package for sending emails and the package  `Urllib <http://docs.python.org/3/library/urllib.html>`_      has some additional web functions.
 
 .. code-block:: python
-   :emphasize-lines: 13,35
    :linenos:
 
     # functions to get system values:
