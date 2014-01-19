@@ -134,7 +134,7 @@ Here the generated class description:
 .. autoclass:: autodocExample.Foo
         :members:
 
-doctest
+Doctest
 ========
 `Doctest <http://docs.python.org/3.3/library/doctest.html>`_  is another big reason why I love python. It is a standard library of Python.
 With doctest you can document and test your code in the same way with your in the code included `docstrings`.
@@ -163,7 +163,7 @@ If you include it with `docstring in this document with::
     .. autoclass:: doctestExample.factorial()
         :members:
 
-        It looks like:
+It looks like:
 
 
 .. autoclass:: doctestExample.factorial()

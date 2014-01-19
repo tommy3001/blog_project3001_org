@@ -6,7 +6,7 @@
 
 
 Python is a fantastic programming tool. It has a simple syntax, a lot of additional libraries and this scripts are running out of the box. 
-All you need is an installed Python interpreter and the used libraries. It is running under MS Windows, Mac, Linux and other. The scripting language 
+All you need is an installed Python interpreter and the used libraries. It runs under MS Windows, Mac, Linux and other. The scripting language
 is like the glue between different components and other programming languages. For example you can call C/C++ functions with Cython inside Python scripts. 
 
 Python claims to combine "remarkable power with very clear syntax" `[Python-docs] <http://docs.python.org/2/tutorial/index.html>`_  
