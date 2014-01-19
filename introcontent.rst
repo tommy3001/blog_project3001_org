@@ -98,7 +98,7 @@ I wrote a small Python script to be ready for the next Mars invasion. It is runn
 
 
 
-:ref: `Part 6: Sphinx` <introsphinx>`
+:ref: `Part 6: Sphinx <introsphinx>`
 ====================================
 
 
