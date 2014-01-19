@@ -94,3 +94,24 @@ I wrote a small Python script to be ready for the next Mars invasion. It is runn
 
   `Psutil <https://code.google.com/p/psutil/>`_  is a small package with very useful system functions.
   :ref:`Read more ... <intropsutil>`
+
+
+
+
+:ref: `Part 6: Sphinx` <introsphinx>`
+====================================
+
+
+This blog entry is a try to show you some hot tips to improve your work flow with the document generator   `sphinx <http://sphinx-doc.org>`_.
+
+The sphinx document generator is very scalable. You are able to improve it with further extensions.
+
+What I want to show you here:
+
+* Generate formulas with the popular latex syntax (png or rendered with mathjax)
+* Include line numbers and highlighted lines in your code
+* Autodoc, get your documentation directly from the code
+* Doctest, integrate your test code in the documentation
+* Generate and integrate your plots directly in sphinx by executing your code examples
+
+  :ref:`Read more ... <introsphinx>`
