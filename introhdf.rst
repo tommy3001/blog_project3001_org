@@ -1,3 +1,5 @@
+.. _introhdf:
+
 What the hell is `HDF <http://en.wikipedia.org/wiki/Hierarchical_Data_Format>`_  ? "The Hierarchical Data Format HDF (HDF4, HDF5) is the name of a set of file formats and libraries designed to store and organize large amounts of numerical data.  Originally developed at the National Center for Supercomputing Applications, it is currently supported by the non-profit HDF Group, whose mission is to ensure continued development of HDF5 technologies, and the continued accessibility of data currently stored in HDF" It is for example widely used by scientist of the NASA space agency. They are using it to save the different measured values of a telescope or a satellite. A really great database of these files is freely available on different NASA project websites. The here used HDF5 format is a little bit newer version. 3 Python packages are used for this example:
 
 * `guidata <https://code.google.com/p/guidata/>`_
@@ -33,6 +35,7 @@ Our first mission is to open this downloaded hdf5 data file. Here is the code fo
 
 
 .. code-block:: python
+    :linenos:
 
     # Create QApplication
     _app = guidata.qapplication()
@@ -44,13 +47,15 @@ Our first mission is to open this downloaded hdf5 data file. Here is the code fo
     W1.edit()
     f1=h5.File(W1.fname)
 
-The second line the initalisation for our guidata module. In line 9 and 10 there is our object for our first window. The class `ParameterSet1`
+The second line the initialisation for our guidata module. In line 4 and 5 there is our object for our first window. The class `ParameterSet1`
 inherits from `DataSet`, a guidata object. Our first window consists of a file open dialog. So all we need for that is the call of the `FileOpenItem()` function.
 The first parameter is the window title, the second is our file format of choice and the third is a default chosen file. `W1.edit()`
 starts the window and the last line is opening our chosen file name with our hdf5 lib.
 
+Here the result:
 
 .. image:: _static/hdf5/1.png
+
 
 .. code-block:: python
 
@@ -79,6 +84,9 @@ Here you can see our next window object. It consists of a choice dialog for our 
 
 .. image:: _static/hdf5/2.png
 
+
+... And the code for the last window.
+
 .. code-block:: python
 
     class ParameterSet3(DataSet):
@@ -88,7 +96,7 @@ Here you can see our next window object. It consists of a choice dialog for our 
     W3.floatarray=list(dset2)
     W3.edit()
 
-... And the last window. We have here a self explaining FloatArrayItem() with an array initialisation consisting of a lot of ones.  `W3.floatarray=list(dset2)`
+We have here a self explaining FloatArrayItem() with an array initialisation consisting of a lot of ones.  `W3.floatarray=list(dset2)`
 is setting up our chosen dataset to this window. You can see the values when you push the button.
 
 

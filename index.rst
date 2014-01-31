@@ -15,6 +15,7 @@ Contents:
    introcython.rst
    intropsutil.rst
    introsphinx.rst
+   introhdf.rst
 
 
 
