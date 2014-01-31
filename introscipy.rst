@@ -19,6 +19,7 @@ B-splines can be evaluated in a numerically stable way by the `de Boor algorithm
 In SciPy is a function implemented to solve this stuff for you. 
 
 .. code-block:: python
+    :linenos:
 
 	import matplotlib.pyplot as pp
 	import numpy as np

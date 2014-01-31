@@ -115,3 +115,26 @@ What I want to show you here:
 * Generate and integrate your plots directly in sphinx by executing your code examples
 
   :ref:`Read more ... <introsphinx>`
+
+
+:ref:`Part 6: Sphinx <introhdf>`
+====================================
+
+
+What the hell is HDF? "The Hierarchical Data Format HDF (HDF4, HDF5) is the name of a set of file formats and libraries designed to store and organize large amounts of numerical data.  Originally developed at the National Center for Supercomputing Applications, it is currently supported by the non-profit HDF Group, whose mission is to ensure continued development of HDF5 technologies, and the continued accessibility of data currently stored in HDF" It is for example widely used by scientist of the NASA space agency. They are using it to save the different measured values of a telescope or a satellite. A really great database of these files is freely available on different NASA project websites. The here used HDF5 format is a little bit newer version. 3 Python packages are used for this example:
+
+    guidata
+    h5py
+    numpy
+
+The aim of this example is to handle this kind of files with a graphical interface in a really easy (Python) way. On the end we will have a program which can open hdf5 files, can show the different hierarchical entries and can present the numerical values in matrices or vectors.
+
+This program needs only 35 lines of code.
+
+Guidata is a Python library generating graphical user interfaces for easy dataset editing and display.
+
+The h5py package is a Pythonic interface to the HDF5 binary data format.
+
+It lets you store huge amounts of numerical data, and easily manipulate that data from NumPy. For example, you can slice into multi-terabyte datasets stored on disk, as if they were real NumPy arrays. Thousands of datasets can be stored in a single file, categorized and tagged however you want.
+
+  :ref:`Read more ... <introhdf>`

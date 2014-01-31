@@ -71,10 +71,10 @@ I wrote a small Python script to be ready for the next Mars invasion. It is runn
 
 The function cpu_percentage in line 16 is relative simple to use. The interval parameter is the time in seconds in which the function is measuring the CPU usage. The function network_io_counters is a tuple of all send bytes for the in and out direction. Therefore it is necessary to call the function with a small time delay and to calculate the difference to get the transmitted bytes (line 19-25). There is a while loop inside (line 13) to be sure that there is really a problem. The loop is counting the issues.
 
-In line 35 the programm is checking the responce of the website (status code 200 means the web server is available). This is included in a try-error handler. If the page is not available, urlopen send back an error message. In this case the atack counter is set directly to 4. Because this is a very bad issue....
+In line 35 the program is checking the response of the website (status code 200 means the web server is available). This is included in a try-error handler. If the page is not available, urlopen send back an error message. In this case the atack counter is set directly to 4. Because this is a very bad issue....
 
 I think the last part of the program is mostly self explaining. There is the emergency email prepared in the case of some not normal behaviours of the server with the smtplib package.
 
-server = smtplib.SMTP('127.0.0.1') is my email server and
+`server = smtplib.SMTP('127.0.0.1')` is my email server and
 
-server.sendmail(FROM, [TO], BODY) is the command to send the email. Nearly so easy as outlook express...
+`server.sendmail(FROM, [TO], BODY)` is the command to send the email. Nearly so easy as outlook express...

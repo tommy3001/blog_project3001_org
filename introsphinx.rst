@@ -47,11 +47,11 @@ The result is:
        0           & \frac{5}{6} & \frac{1}{6}
      \end{bmatrix}
 
-There are two way to integrate your formulas in your sphinx documentation:
+There are two ways to integrate your formulas in your sphinx documentation:
 
 The first possibility is the javascript library `Mathjax <http://www.mathjax.org/>`_ :
 
-To do this, you must include the following extension in your conf.py:
+To do this, you must include the following extension in your `conf.py` in your root folder of the documentation:
 
 .. code-block:: python
 
@@ -68,7 +68,7 @@ To do this, you must include the following extension in your conf.py:
 Mathjax will be included automatically in your html output (`make html` command in the root directory of your document) by implementing the javascript library.
 
 
-The second way is by including `'sphinx.ext.pngmath,` instead  in your `extensions` variable in the `conf.py` file, which is in the root directory of your documents. One dependence is dvipng. With this extension the formulas are rendered to png.
+The second way is by including `sphinx.ext.pngmath` instead  in your `extensions` variable in the `conf.py` file.. One dependence is dvipng. With this extension the formulas are rendered to png.
 
 
 Extended code view
@@ -78,7 +78,7 @@ To highlight code lines, you should use :emphasize-lines: , e.g.::
 
         .. code-block:: python
             :linenos:
-            :emphasize-lines: 3,5
+            :emphasize-lines: 3,3-5
 
             def primes( kmax):
                 p= range(1000)
@@ -110,7 +110,7 @@ To show only the line numbers, you can set `:linenos:` without `:emphasize-lines
 Autodoc
 =======
 
-With the `autodoc <http://sphinx-doc.org/ext/autodoc.html>`_ extension you are able to extract documentation directly from your python code.
+With the `autodoc <http://sphinx-doc.org/ext/autodoc.html>`_ extension you are able to extract documentation directly from your Python code.
 For example, if you want to include the `doc string` in your sphinx generated documentation  of the following  module,
 
 .. literalinclude:: autodoc_example/autodocExample.py
@@ -136,7 +136,7 @@ Here the generated class description:
 
 Doctest
 ========
-`Doctest <http://docs.python.org/3.3/library/doctest.html>`_  is another big reason why I love python. It is a standard library of Python.
+`Doctest <http://docs.python.org/3.3/library/doctest.html>`_  is another big reason why I love Python. It is a standard library of Python.
 With doctest you can document and test your code in the same way with your in the code included `docstrings`.
 
 Here our example function:
@@ -153,7 +153,7 @@ One remark: To include complete files in your sphinx document, you can use::
 
 
 
-When you run it with python doctestExample.py, you will get an error message in case of a difference between the described output and the real output.
+When you run it with Python doctestExample.py, you will get an error message in case of a difference between the described output and the real output.
 For more information, even in the case of no failures, you should use `python -v doctestExample.py`
 
 Doctest compares the function call (starts with `>>>`) with the output of the command, which is placed in the docstring directly under the function call description.
