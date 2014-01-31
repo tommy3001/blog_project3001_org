@@ -158,7 +158,7 @@ For more information, even in the case of no failures, you should use `python -v
 
 Doctest compares the function call (starts with `>>>`) with the output of the command, which is placed in the docstring directly under the function call description.
 
-If you include it with `docstring in this document with::
+If you include it with `docstring` in this document with::
 
     .. autoclass:: doctestExample.factorial()
         :members:
