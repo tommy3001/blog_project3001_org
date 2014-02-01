@@ -23,7 +23,7 @@ Generate Formulas
 ==================
 
 
-Formulas are generated with the latex syntax for formulas. In the wikibooks about latex you can find an introduction about this topic.
+Formulas are generated with the latex syntax for formulas. In the `wikibooks <http://en.wikibooks.org/wiki/LaTeX/Mathematics>`_ about latex you can find an introduction about this topic.
 In sphinx you can include inline math (e.g. the result of `:math:`x\\leftarrow y\\ x\\forall y\ x-y``  is
 :math:`x\leftarrow y\ x\forall y\ x-y` or display mode.
 Here an example::
@@ -176,7 +176,7 @@ Integration of plots
 ====================
 
 
-To plot the example from the first blog article and include it in this document, you can write::
+To plot the example from the first blog article and include it automatically in this document , you can write::
 
     .. plot::
 
