@@ -16,6 +16,7 @@ Contents:
    intropsutil.rst
    introsphinx.rst
    introhdf.rst
+   introjinja.rst
 
 
 
