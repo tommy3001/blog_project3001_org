@@ -32,12 +32,14 @@ sys.path.insert(0, os.path.abspath('doctest_example'))
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
-    'sphinx.ext.todo',   
-    'sphinx.ext.mathjax',
+    'sphinx.ext.todo',
+    'sphinx.ext.pngmath',
     'sphinx.ext.viewcode',
   'matplotlib.sphinxext.plot_directive',
 ]
 
+
+#'sphinx.ext.mathjax',
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
