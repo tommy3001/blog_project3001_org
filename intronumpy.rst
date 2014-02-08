@@ -108,6 +108,26 @@ Here is an example of a solver for linear matrix equations. In the figure you ca
 
 And here the code to solve this problem to get the current.
 
+.. code-block:: python
+    :linenos:
+
+    import matplotlib.pyplot as pp
+    import numpy as np
+
+    #Some example values
+    R_1=100;R_2=200;R_3=300;R_4=400;R_5=500
+    I_1=0.0;I_2=0.0;I_3=0.0
+    U_q1=50.0; U_q2=50.0
+
+    #definition of the array
+    R_mat = np.array([[1.,  -1., -1.],[0.,  -R_2,  R_4+R_5],[R_3+R_1,  R_2, 0]])
+    U_mat = np.array([0,U_q1,U_q2])
+
+    #numeric solution of the current
+    I_mat = np.linalg.solve(R_mat,U_mat)
+
+    print I_mat
+
 In line 11 the matrices for the resistor and in  line 12 the matrices for the voltage is generated. In line 15 the formula is solved to get the variables (in this case the current).
 
 The output is:
