@@ -109,7 +109,6 @@ Here is an example of a solver for linear matrix equations. In the figure you ca
 And here the code to solve this problem to get the current. 
 
 .. code-block:: python
-    :linenos:
 
     import matplotlib.pyplot as pp
     import numpy as np
