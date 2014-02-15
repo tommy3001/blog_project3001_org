@@ -124,7 +124,8 @@ you can use the following instruction::
 
 
 
-The module class must be included in your `conf.py` file (e.g. with `sys.path.insert(0, os.path.abspath('autodoc_example'))`).
+The module class must be included in your `conf.py` file
+(e.g. with `sys.path.insert(0, os.path.abspath('autodoc_example'))`).
 In this case the folder `autodoc_example' is included in your root folder of your documentation (normally the code and
 the documentation are placed in  different folders in the application root folder).
 

@@ -5,53 +5,55 @@
 ****************************************************
 
 With `Cython <http://cython.org/>`_   you are able to write C and C++ modules for Python. It implements a superset of the Python language.
-With Cython you are also able to call C-functions and realize strong typing of variables and functions like float 
+With Cython you are also able to call C-functions and realize strong typing of variables and functions like float
 (floating point numbers) or int (integer) definition of variables. Here is an example of strong typing with Cython:
 
 .. code-block:: python
 
-	def primes(int kmax):
-    		cdef int n, k, i
-    		cdef int p[1000]
-    		result = []
-    		if kmax > 1000:
-			kmax = 1000
-   		k = 0
-   		n = 2
-    		while k < kmax:
-        		i = 0
-        		while i < k and n % p[i] != 0:
-           			 i = i + 1
-        		if i == k:
-            			p[k] = n
-           			 k = k + 1
-            			result.append(n)
-        		n = n + 1
-  		 return result
- 
+    def primes(int kmax):
+        cdef int n, k, i
+        cdef int p[1000]
+        result = []
+        if kmax > 1000:
+            kmax = 1000
+        k = 0
+        n = 2
+        while k < kmax:
+            i = 0
+            while i < k and n % p[i] != 0:
+                i = i + 1
+            if i == k:
+                p[k] = n
+                k = k + 1
+                result.append(n)
+            n = n + 1
+        return result
+
+
 This implementation of an algorithm to find prime numbers has some additional commands instead of the next one, which is implemented in pure Python:
 
 .. code-block:: python
 
-	def primes( kmax):
-    		p= range(1000)
-    		result = []
-    		if kmax > 1000:
-        		kmax = 1000
-    		k = 0
-    		n = 2
-    		while k < kmax:
-        		i = 0
-        		while i < k and n % p[i] != 0:
-            			i = i + 1
-        		if i == k:
-            			p[k] = n
-           			 k = k + 1
-           			 result.append(n)
-        		n = n + 1
-    		 return result
+    def primes( kmax):
+        p= range(1000)
+        result = []
+        if kmax > 1000:
+            kmax = 1000
+        k = 0
+        n = 2
+        while k < kmax:
+            i = 0
+            while i < k and n % p[i] != 0:
+                i = i + 1
+            if i == k:
+                p[k] = n
+                k = k + 1
+                result.append(n)
+            n = n + 1
+        return result
 
-  
+
+
 The only difference between the both algorithm is this part:
 
 Strong typing with Cython:
@@ -60,10 +62,9 @@ Strong typing with Cython:
 
 	#primes function with additional Cython code:
 	def primes(int kmax):
-    		cdef int n, k, i
-    		cdef int p[1000]
-    		result = []
-
+        cdef int n, k, i
+        cdef int p[1000]
+        result = []
 
 Normal variable definition in Python:
 
@@ -71,13 +72,12 @@ Normal variable definition in Python:
 
 	#primes in standard Python syntax:
 	def primes( kmax):
-    		p= range(1000)
-    		result = []
+        p= range(1000)
+        result = []
 
-
-What is the difference? In the upper Cython version you can see the definitions of the variable types like in standard C. For example cdef int n,k,i in line 3. 
-This additional type definition (e.g. integer) allows the Cython compiler to generate more efficient C code from this Cython code. While standard Python code is 
-saved in *.py files, the Cython code is saved in *.pyx files.
+What is the difference? In the upper Cython version you can see the definitions of the variable types like in standard C.
+For example `cdef int n,k,i` in line 3. This additional type definition (e.g. integer) allows the Cython compiler to generate
+more efficient C code from this Cython code. While standard Python code is saved in `*.py` files, the Cython code is saved in `*.pyx` files.
 
 And what is with the speed? So lets try it!
 
@@ -109,7 +109,6 @@ Where is the magic? Here it is:
 .. code-block:: python
 
 	import pyximport; pyximport.install()
-
 
 With the module pyximport you are able to import Cython *.pyx files, in this case primesCy.pyx, with the Cython version of the primes function. 
 The pyximport.install() command allows the Python interpreter to start the Cython compiler directly to generate C-code, which is automatically compiled to a *.so 
