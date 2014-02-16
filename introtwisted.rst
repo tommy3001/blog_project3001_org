@@ -4,11 +4,16 @@
 -Python Packages- Part 9: Twisted Matrix
 ****************************************************
 
-`Twisted-Matrix <https://twistedmatrix.com/trac/>`_, an event-driven networking engine.
+`Twisted-Matrix <https://twistedmatrix.com/trac/>`_, an `event-driven <http://en.wikipedia.org/wiki/Event-driven_programming>`_ networking engine.
 
-Twisted-Matrix is a package with Network and Internet tools. The package supports TCP, UDP, SSL/TLS, IP Multicast, Unix
-domain sockets, a large number of protocols (including HTTP, XMPP, NNTP, IMAP, SSH, IRC, FTP, and others). Even more it
-is also an event handler. This means that you can define callbacks in Twisted. Callbacks are functions, which will be
+Twisted-Matrix is a package with Network and Internet tools. The package supports  `TCP <http://en.wikipedia.org/wiki/Transmission_Control_Protocol>`_ ,
+`UDP <http://en.wikipedia.org/wiki/User_Datagram_Protocol>`_,  `SSL/TLS <http://en.wikipedia.org/wiki/Transport_Layer_Security>`_,
+`IP Multicast <http://en.wikipedia.org/wiki/IP_Multicast>`_, Unix domain `sockets <http://en.wikipedia.org/wiki/Unix_domain_socket>`_,
+`IP Multicast <http://en.wikipedia.org/wiki/IP_Multicast>`_,
+a large number of protocols (including `HTTP <http://en.wikipedia.org/wiki/HTTP>`_ , `XMPP <http://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol>`_ ,
+`NNTP <http://en.wikipedia.org/wiki/Network_News_Transfer_Protocol>`_ , `IMAP <http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol>`_ ,
+`SSH <http://en.wikipedia.org/wiki/Secure_Shell>`_, `IRC <http://en.wikipedia.org/wiki/IRC>`_ , `FTP <http://en.wikipedia.org/wiki/File_Transfer_Protocol>`_ ,
+and others). This means that you can define callbacks in Twisted. Callbacks are functions, which will be
 called when an event arrived. This has the advantage, that your program is not blocking when it must wait for example
 of a network connection. In this time your program can do different stuff, for example database tasks. In this program
 is a network interface implemented which allows calls from other hosts to execute different functions on the server.
@@ -16,11 +21,11 @@ This interface is server-side defined with the XML-RPC standard.
 
 The XML-RPC standard is a remote procedure call (RPC) protocol which uses XML to encode its calls and HTTP as a transport mechanism.
 
-From server side the calculated values of our crankshaft are returned as a xml-file. For example the client can use this
+From server side the calculated values of our crankshaft are returned in a xml-format. For example the client can use this
 information for further calculations. From the first blog entry, we know how to calculate the speed of a crank shaft.
-In my interactive first example I use the next code example to calculate the values for the diagram. The returned values
-(xml-format) from the Twisted event handler are read out by Javascript (example coming soon). Here I want you to show a
-solution with a client which is also implemented in Python.
+In my interactive first example `interactive first example <http://www.project3001.org/example1/>`_ I use the next code
+example to calculate the values for the diagram. The returned values (xml-format) from the Twisted event handler are read
+out by Javascript (example coming soon). Here I want you to show a solution with a client which is also implemented in Python.
 
 One remark: Twisted is not completely ready to use for Python 3.x at this moment (but works perfect with the 2.7 branch).
 
