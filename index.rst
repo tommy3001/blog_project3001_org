@@ -17,6 +17,7 @@ Contents:
    introsphinx.rst
    introhdf.rst
    introjinja.rst
+   introtwisted.rst
 
 
 

@@ -132,3 +132,7 @@ Python time: 0.3302 seconds
 
 That is a really good result...
 
+(I contributed this article also to the famous `kennethreitz/python-guide. <http://docs.python-guide.org//>`_.)
+
+
+

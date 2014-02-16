@@ -162,3 +162,20 @@ advises us to use templates. A template engine manages a suite of
 template files, with a system of hierarchy and inclusion to ...
 
 :ref:`Read more ... <introjinja>`
+
+
+:ref:`Part 9: Twisted Matrix <introtwisted>`
+============================================================
+Twisted-Matrix, an event-driven networking engine.
+
+Twisted-Matrix is a package with Network and Internet tools. The package supports TCP, UDP, SSL/TLS, IP Multicast, Unix
+domain sockets, a large number of protocols (including HTTP, XMPP, NNTP, IMAP, SSH, IRC, FTP, and others). Even more it
+is also an event handler. This means that you can define callbacks in Twisted. Callbacks are functions, which will be
+called when an event arrived. This has the advantage, that your program is not blocking when it must wait for example
+of a network connection. In this time your program can do different stuff, for example database tasks. In this program
+is a network interface implemented which allows calls from other hosts to execute different functions on the server.
+This interface is server-side defined with the XML-RPC standard.
+
+The XML-RPC standard is a remote procedure call (RPC) protocol which uses XML to encode its calls and HTTP as a transport mechanism.
+
+:ref:`Read more ... <introtwisted>`

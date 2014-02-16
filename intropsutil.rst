@@ -9,7 +9,7 @@ I wrote a small Python script to be ready for the next Mars invasion. It is runn
 
 `Psutil <https://code.google.com/p/psutil/>`_  is a small package with very useful system functions. all the needed functions to check the performance of my server are inside this package.
 
-`Smtplib <http://docs.python.org/3/library/smtplib.html>`_   is the python package for sending emails and the package  `Urllib <http://docs.python.org/3/library/urllib.html>`_      has some additional web functions.
+`Smtplib <http://docs.python.org/3/library/smtplib.html>`_   is the Python package for sending emails and the package  `Urllib <http://docs.python.org/3/library/urllib.html>`_      has some additional web functions.
 
 .. code-block:: python
 
