@@ -35,7 +35,7 @@ You are also able to call C-functions and realize declaration of variables and f
 This implementation of an algorithm to find prime numbers has some additional keywords instead of the next one, which is implemented in pure Python:
 
 .. code-block:: python
-
+    :linenos:
 
     def primes(kmax):
     """Calculate all prime numbers up to kmax
@@ -80,7 +80,7 @@ The only difference between the both algorithm is this part:
         result = []
 
 What is the difference? In the upper Cython version you can see the declaration of the variable types  and the integer array like in standard C.
-For example `cdef int n,k,i` in line 3.  This additional type definition (e.g. integer) allows the Cython compiler to generate
+For example `cdef int n,k,i` in line 5.  This additional type definition (e.g. integer) allows the Cython compiler to generate
 more efficient C code from the second code. While standard Python code is saved in `*.py` files,Cython code is saved in `*.pyx` files.
 
 And what is with the speed? So lets try it!
