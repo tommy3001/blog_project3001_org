@@ -19,7 +19,7 @@ of a network connection. In this time your program can do different stuff, for e
 is a network interface implemented which allows calls from other hosts to execute different functions on the server.
 This interface is server-side defined with the XML-RPC standard.
 
-The XML-RPC standard is a remote procedure call (RPC) protocol which uses XML to encode its calls and HTTP as a transport mechanism.
+The ` XML-RPC <https://en.wikipedia.org/wiki/XML-RPC>`_  standard is a remote procedure call (RPC) protocol which uses XML to encode its calls and HTTP as a transport mechanism.
 
 From server side the calculated values of our crankshaft are returned in a xml-format. For example the client can use this
 information for further calculations. From the first blog entry, we know how to calculate the speed of a crank shaft.
