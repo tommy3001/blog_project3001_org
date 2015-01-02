@@ -110,6 +110,7 @@ is setting up our chosen dataset to this window. You can see the values when you
 Here again the complete code:
 
 .. code-block:: python
+    :linenos:
 
     import numpy as np
     import h5py as h5
