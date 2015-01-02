@@ -135,6 +135,6 @@ The output is:
 
 [ 0.10483871  0.04032258  0.06451613]
 
-Here you can find a great `numpy/scipy cookbook <http://wiki.scipy.org/Cookbookl>`_.
+Here you can find a great `numpy/scipy cookbook <http://wiki.scipy.org/Cookbook>`_.
 
 And here is a great list of `matplotlib examples <http://matplotlib.org/examples/>`_.
