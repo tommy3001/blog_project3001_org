@@ -110,6 +110,7 @@ Here is an example of a solver for linear matrix equations. In the figure you ca
 And here the code to solve this problem to get the current. 
 
 .. code-block:: python
+    :linenos:
 
     import matplotlib.pyplot as pp
     import numpy as np
@@ -128,7 +129,7 @@ And here the code to solve this problem to get the current.
 
     print I_mat
 
-In line 10 the matrices for the resistor and in  line 11 the matrices for the voltage is generated. In line 16 the formula is solved to get the variables (in this case the current).
+In line 10 the matrices for the resistor and in  line 11 the matrices for the voltage is generated. In line 14 the formula is solved to get the variables (in this case the current).
 
 The output is:
 
