@@ -13,7 +13,7 @@ Twisted-Matrix is a package with Network and Internet tools. The package support
 a large number of protocols (including `HTTP <http://en.wikipedia.org/wiki/HTTP>`_ , `XMPP <http://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol>`_ ,
 `NNTP <http://en.wikipedia.org/wiki/Network_News_Transfer_Protocol>`_ , `IMAP <http://en.wikipedia.org/wiki/Internet_Message_Access_Protocol>`_ ,
 `SSH <http://en.wikipedia.org/wiki/Secure_Shell>`_, `IRC <http://en.wikipedia.org/wiki/IRC>`_ , `FTP <http://en.wikipedia.org/wiki/File_Transfer_Protocol>`_ ,
-and others). This means that you can define callbacks in Twisted. Callbacks are functions, which will be
+and others).  Twisted is mainly an event-driven networking engine. This means that you can define callbacks in Twisted. Callbacks are functions, which will be
 called when an event arrived. This has the advantage, that your program is not blocking when it must wait for example
 of a network connection. In this time your program can do different stuff, for example database tasks. In this program
 is a network interface implemented which allows calls from other hosts to execute different functions on the server.

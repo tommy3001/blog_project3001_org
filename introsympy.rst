@@ -23,6 +23,7 @@ So, we need the following first steps in Sympy:
 
 
 .. code-block:: python
+    :linenos:
 
 	#Import of the necessary functions from the sympy module
 	from sympy import symbols, pprint, Function, Matrix

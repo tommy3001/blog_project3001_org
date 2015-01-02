@@ -102,6 +102,7 @@ Here is the output of the plot:
 
 Here is an example of a solver for linear matrix equations. In the figure you can see the circuit to be analyzed.
 
+.. image:: _static/
 
 .. math::
 	\begin{array}{c}(I)\\(II)\\(III)\end{array}\left[\begin{array}{ccc}0 & -R_{2} & R_{4}+R_{5}\\R_{3}+R_{1} & R_{2} & 0\\1 & -1 & 1\end{array}\right]\cdot\left[\begin{array}{c}I_{1}\\I_{2}\\I_{3}\end{array}\right]=\left[\begin{array}{c}U_{q1}\\U_{q2}\\0\end{array}\right]
@@ -118,7 +119,7 @@ And here the code to solve this problem to get the current.
     I_1=0.0;I_2=0.0;I_3=0.0
     U_q1=50.0; U_q2=50.0
 
-    #definition of the arrayhttps://bitbucket.org/MajorTom3001/project3001_org
+    #definition of the array
     R_mat = np.array([[1.,  -1., -1.],[0.,  -R_2,  R_4+R_5],[R_3+R_1,  R_2, 0]])
     U_mat = np.array([0,U_q1,U_q2])
 

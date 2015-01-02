@@ -4,12 +4,15 @@
 -Python Packages- Part 4: Cython 
 ****************************************************
 With `Cython <http://cython.org/>`_   you are able to write C and C++ modules for Python. It implements a superset of the Python language.
-With Cython you are also able to call C-functions and realize strong typing of variables and functions like float
-(floating point numbers) or int (integer) definition of variables. Here is an example of strong typing with Cython:
+You are also able to call C-functions and realize declaration of variables and functions like in C (e.g. `float x;`or `int y;`). Here is an example:
 
 .. code-block:: python
+    :linenos:
 
     def primes(int kmax):
+    """Calculate all prime numbers up to kmax
+    (max. value: 1000) cdef variable declaration """
+
         cdef int n, k, i
         cdef int p[1000]
         result = []
@@ -29,11 +32,15 @@ With Cython you are also able to call C-functions and realize strong typing of v
         return result
 
 
-This implementation of an algorithm to find prime numbers has some additional commands instead of the next one, which is implemented in pure Python:
+This implementation of an algorithm to find prime numbers has some additional keywords instead of the next one, which is implemented in pure Python:
 
 .. code-block:: python
 
-    def primes( kmax):
+
+    def primes(kmax):
+    """Calculate all prime numbers up to kmax
+    (max. value: 1000) """
+
         p= range(1000)
         result = []
         if kmax > 1000:
@@ -55,7 +62,6 @@ This implementation of an algorithm to find prime numbers has some additional co
 
 The only difference between the both algorithm is this part:
 
-Strong typing with Cython:
 
 .. code-block:: python
 
@@ -65,18 +71,17 @@ Strong typing with Cython:
         cdef int p[1000]
         result = []
 
-Normal variable definition in Python:
 
 .. code-block:: python
 
 	#primes in standard Python syntax:
-    def primes( kmax):
+    def primes(kmax):
         p= range(1000)
         result = []
 
-What is the difference? In the upper Cython version you can see the definitions of the variable types like in standard C.
-For example `cdef int n,k,i` in line 3. This additional type definition (e.g. integer) allows the Cython compiler to generate
-more efficient C code from this Cython code. While standard Python code is saved in `*.py` files, the Cython code is saved in `*.pyx` files.
+What is the difference? In the upper Cython version you can see the declaration of the variable types  and the integer array like in standard C.
+For example `cdef int n,k,i` in line 3.  This additional type definition (e.g. integer) allows the Cython compiler to generate
+more efficient C code from the second code. While standard Python code is saved in `*.py` files,Cython code is saved in `*.pyx` files.
 
 And what is with the speed? So lets try it!
 
@@ -104,7 +109,7 @@ And what is with the speed? So lets try it!
 	print "Python time: %s" %(t2-t1)
 
 
-Where is the magic? Here it is:
+This lines are special:
 
 .. code-block:: python
 
@@ -112,10 +117,9 @@ Where is the magic? Here it is:
     pyximport.install()
 
 
-With the module `pyximport` you are able to import Cython `*.pyx` files, in this case `primesCy.pyx`, with the Cython
-version of the primes function.
+The `pyximport` module allows you to import `pyx` files (e.g., `primesCy.pyx`) with the Cython-compiled version of the `primes` function.
 The `pyximport.install()` command allows the Python interpreter to start the Cython compiler directly to generate C-code,
-which is automatically compiled to a `*.so` C-library. ... and Cython is able to import this library for you in your Python-code.
+which is automatically compiled to a `*.so` C-library. Cython is able to import this library for you in your Python-code.
 Very easy and very efficient. With the `time.time()` function you are able to compare the time between this 2 different calls to find 500 prime numbers.
 
 On a standard notebook (dualcore AMD E-450 1,6 GHz)  the measured values are:
