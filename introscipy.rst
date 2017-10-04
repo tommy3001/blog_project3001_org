@@ -4,25 +4,25 @@
 -Python Packages- Part 2: Scipy
 ****************************************************
 
+In this part I want to write something about Scipy. It is an extension for Numpy.
 
-In this part I want to tell something about SciPy. It is an extension for Numpy.
+`SciPy <http://www.scipy.org>`_ contains modules for optimization, linear algebra, integration, interpolation, special
+functions, FFT, signal and image processing, ODE solvers and others.
 
-`SciPy <http://www.scipy.org>`_ contains modules for optimization, linear algebra, integration, interpolation, special functions,
-FFT, signal and image processing, ODE solvers and others.
-
-Here I want to show you an example with B-splines. It is a subfield of numerical analysis. It has a wide range of applications
-like in the computer science subfields computer-aided design and computer graphics. It is also used for motion planning of robots
-and other mechanic structures.
-
-B-splines were investigated in the beginning of the last century by Nikolai Lobachevsky.  In the mathematics a spline is a smooth
-polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect (which are called knots).
-
+Here I want to show you an example with B-splines. It is a subfield of numerical analysis. It has a
+wide range of applications like in the computer science subfields computer-aided design and
+computer graphics. It is also used for motion planning of robots and other mechanic structures.
+B-splines were investigated in the beginning of the last century by Nikolai Lobachevsky. In the
+mathematics, a spline is a smooth polynomial function that is piecewise-defined, and possesses
+a high degree of smoothness at the places where the polynomial pieces connect (which are
+known as knots).
 B-splines can be evaluated in a numerically stable way by the `de Boor algorithm <http://en.wikipedia.org/wiki/De_Boor_algorithm>`_  .
-I don't want to treat you here with this stuff of mathematical derivations. If you are more interested in this, you can read detailed
-information about computed geometry here
-`here <http://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/>`_  . The details and the derivation are also for me not of interest yet.
+I don’t want to confuse you here with this stuff of mathematical derivations. If you are more interested in this,
+you can read detailed information about computed geometry `here <http://www.cs.mtu.edu/~shene/COURSES/cs3621/NOTES/>`_  .
+The details of the deviations are also not my interest.
 
-In SciPy is a function implemented to solve this stuff for you.
+In Scipy is a function implemented to solve these problems for you. See the example below.
+
 
 .. code-block:: python
     :linenos:
