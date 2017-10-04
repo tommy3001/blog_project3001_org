@@ -27,9 +27,8 @@ In my interactive first example `interactive first example <http://www.project30
 example to calculate the values for the diagram. The returned values (xml-format) from the Twisted event handler are read
 out by Javascript (example coming soon). Here I want you to show a solution with a client which is also implemented in Python.
 
-One remark: Twisted is not completely ready to use for Python 3.x at this moment (but works perfect with the 2.7 branch).
 
-A second remark: Twisted runs absolutely perfect on Unix/Linux machines ( I'm really sorry for that...).
+
 
 .. code-block:: python
 

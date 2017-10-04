@@ -5,11 +5,11 @@
 ****************************************************
 
 
-Python is a fantastic programming tool. It has a simple syntax, a lot of additional libraries and this scripts are running out of the box. 
+Python is a fantastic programming tool. It has a simple syntax, a lot of additional libraries and these scripts are running out of the box.
 All you need is an installed Python interpreter and the used libraries. It runs under MS Windows, Mac, Linux and other. The scripting language
-is like the glue between different components and other programming languages. For example you can call C/C++ functions with Cython inside Python scripts. 
+is like the glue between different components and other programming languages. For example you can call C/C++ functions with Cython inside Python scripts.
 
-Python claims to combine "remarkable power with very clear syntax" `[Python-docs] <http://docs.python.org/2/tutorial/index.html>`_  
+Python claims to combine "remarkable power with very clear syntax" `[Python-docs] <http://docs.python.org/2/tutorial/index.html>`_
 
 In this blog I want to show you some important tools and libraries. This is the first part of this topic. Here is is a introduction by example in the 2 packages.
 
@@ -39,14 +39,24 @@ In C/C++ a multiplication of 2 2D matrices is done in this way:
   		}
 	}
 
-You can see 2 for-loops where in each step one element is calculated. And here is the version in Python with Numpy:
+You can see 2 for-loops where in each step one element is calculated.
+
+And here is the version in Python with Numpy:
 
 .. code-block:: python
 
 	c=a*b
 
+For now you are may be a little bit confused about the used variables.
 
-It is nearly so fast as the C/C++ implementation, because Numpy calls internally C/C++ functions. So, Python is like an interface to C/C++ to make the live for engineers easier.
+Here is an example how to define the both matrices:
+
+.. code-block:: python
+
+  a = np.array([[6, 7],[3,2]])
+  b = np.array([[2, 6],[2,9]])
+
+It is nearly so fast as the C/C++ implementation, because Numpy calls internally C/C++ functions. So, Python can be an interface to C/C++ to make the live for engineers easier.
 
 Matplotlib
 ==========
@@ -57,7 +67,7 @@ Matplotlib
 
 **1. Example**
 
-In the the figure you can see a model of a crankshaft. The aim is here to calculate the velocity of x(t). In formula 1 you can see the used calculation. 
+In the figure you can see a model of a crankshaft. The aim is here to calculate the velocity of x(t). In formula 1 you can see the used calculation.
 
 .. image:: _static/schubkurbel.png
 
@@ -70,12 +80,13 @@ In the the figure you can see a model of a crankshaft. The aim is here to calcul
 	x=l_{2}(\lambda\cos\varphi+\sqrt{1-\lambda^{2}\sin^{2}\varphi})
 
 	(1) ~~~~~~ v(t)=\dot{x}(t)=-\lambda l_{2}\omega\sin(\omega t)\left(1+\frac{\lambda\cos(\omega t)}{\sqrt{1-\lambda^{2}\sin^{2}(\omega t)}}\right)
-	
+
 	l_1 = 1, ~l_2=5,~ \omega= 4
 
 To calculate it in Python, you can do the following steps:
 
 .. code-block:: python
+    :linenos:
 
 	import matplotlib.pyplot as pp
 	import numpy as np
@@ -92,7 +103,10 @@ To calculate it in Python, you can do the following steps:
 	pp.plot(t, S, color='red', lw=2)
 	pp.savefig("plot.png",dpi=60)
 
-In line 1 and 2 are the 2 necessary packages implemented. Matplotlib supports a lot of plotting functions (line 13-15), while Numpy is used for the array, which is generated in line 11. In line 13 is the time frame for the plot . The range is from -6 to 6 seconds with a step size of 0.1 seconds. the pp.plot() function is the the Matplot call to generate the plot. The first parameter is the time-array (x-Axes). The second parameter is the function to plot (y-Axes), in our case formula (1). With pp.savefig the plot is saved in a file.
+In line 1 and 2 are the 2 necessary packages implemented. Matplotlib supports a lot of plotting functions (line 13-15), while Numpy is used for the array,
+which is generated in line 11. In line 13 is the time frame for the plot. The range is from -6 to 6 seconds with a step size of 0.1 seconds.
+The `pp.plot()` function is the Matplot call to generate the plot. The first parameter is the time-array (X-Axes). The second parameter is the
+function to plot (Y-Axes), in our case formula (1). With `pp.savefig`the plot is saved in a file.
 
 Here is the output of the plot:
 
@@ -107,7 +121,7 @@ Here is an example of a solver for linear matrix equations. In the figure you ca
 .. math::
 	\begin{array}{c}(I)\\(II)\\(III)\end{array}\left[\begin{array}{ccc}0 & -R_{2} & R_{4}+R_{5}\\R_{3}+R_{1} & R_{2} & 0\\1 & -1 & 1\end{array}\right]\cdot\left[\begin{array}{c}I_{1}\\I_{2}\\I_{3}\end{array}\right]=\left[\begin{array}{c}U_{q1}\\U_{q2}\\0\end{array}\right]
 
-And here the code to solve this problem to get the current. 
+And here the code to solve this problem to get the current.
 
 .. code-block:: python
     :linenos:

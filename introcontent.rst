@@ -7,9 +7,9 @@
 :ref:`Part 1: Numpy and Matplotlib <intronumpy>`
 ==================================================================
 
-Python is a fantastic programming tool. It has a simple syntax, a lot of additional libraries and this scripts are running out of the box. 
-All you need is an installed Python interpreter and the used libraries. It is running under MS Windows, Mac, Linux and other. The scripting language 
-is like the glue between different components and other programming languages. For example you can call C/C++ functions with Cython inside Python scripts. 
+Python is a fantastic programming tool. It has a simple syntax, a lot of additional libraries and these scripts are running out of the box.
+All you need is an installed Python interpreter and the used libraries. It is running under MS Windows, Mac, Linux. You can even compile it from source to support other operating systems and plattforms.
+The scripting language is like the glue between different components and other programming languages. For example you can call C/C++ functions with Cython inside Python scripts.
 
 Python claims to combine "remarkable power with very clear syntax" [Python-docs]
 
@@ -18,7 +18,7 @@ In this blog I want to show you some important tools and libraries. This is the 
 *  Numpy
 *  Matplotlib
 
-Calculation examples with visualization you can find in the project part ( project 1 and 2) .  
+Calculation examples with visualizations you can find in the project part ( project 1 and 2) .
 
 :ref:`Read more ...<intronumpy>`
 
@@ -31,13 +31,13 @@ In this part I want to write something about SciPy. It is an extension for Numpy
 
 SciPy contains modules for optimization, linear algebra, integration, interpolation, special functions, FFT, signal and image processing, ODE solvers and others.
 
-Here I want to show you an example with B-splines. It is a subfield of numerical analysis. It has a wide range of applications like in the computer science subfields computer-aided design and computer graphics. It is also used for motion planning of robots and other mechanic structures. 
+Here I want to show you an example with B-splines. It is a subfield of numerical analysis. It has a wide range of applications like in the computer science subfields computer-aided design and computer graphics. It is also used for motion planning of robots and other mechanic structures.
 
 B-splines were investigated in the beginning of the last century by Nikolai Lobachevsky.  In the mathematics a spline is a smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect (which are known as knots).
 
 B-splines can be evaluated in a numerically stable way by the de Boor algorithm.  I don't want to treat you here with this stuff of mathematical derivations. If you are more interested in this, you can read detailed information about computed geometry here. The details are also  for me not of interest.
 
-In SciPy is a function implemented to solve this stuff for you.   
+In SciPy is a function implemented to solve this stuff for you.
 :ref:`Read more ...<introscipy>`
 
 
@@ -47,8 +47,8 @@ In SciPy is a function implemented to solve this stuff for you.
 
 SymPy is a library for symbolic computation for (you are right...) Python.
 
-It includes features like basic symbolic arithmetic, calculus, algebra and discrete mathematics.To show you a small example, 
-I used a classical linear system of an one-dimensional movement of a mass  described with the Newton’s laws of motion which is 
+It includes features like basic symbolic arithmetic, calculus, algebra and discrete mathematics.To show you a small example,
+I used a classical linear system of an one-dimensional movement of a mass  described with the Newton’s laws of motion which is
 moving vertical between 2 walls, a spring and a damper. :ref:`Read more ... <introsympy>`
 
 
@@ -57,8 +57,8 @@ moving vertical between 2 walls, a spring and a damper. :ref:`Read more ... <int
 =====================================================
 
 
-With Cython you are able to write C and C++ modules for Python. It implements a superset of the Python language. 
-With Cython you are also able to call C-functions and realize strong typing of variables and functions like float 
+With Cython you are able to write C and C++ modules for Python. It implements a superset of the Python language.
+With Cython you are also able to call C-functions and realize strong typing of variables and functions like float
 (floating point numbers) or int (integer) definition of variables. Here is an example of strong typing with Cython:
 
 .. code-block:: python
@@ -81,7 +81,7 @@ With Cython you are also able to call C-functions and realize strong typing of v
             			result.append(n)
         		n = n + 1
   		 return result
- 
+
 This implementation of an algorithm to find prime numbers has some additional commands instead of the next one, which is implemented in pure Python:
 :ref:`Read more ... <introcython>`
 
@@ -179,3 +179,15 @@ This interface is server-side defined with the XML-RPC standard.
 The XML-RPC standard is a remote procedure call (RPC) protocol which uses XML to encode its calls and HTTP as a transport mechanism.
 
 :ref:`Read more ... <introtwisted>`
+
+
+
+
+:ref:`Part 10: Fabric <introfabric>`
+============================================================
+
+"Fabric is a Python library and command-line tool for streamlining the use of SSH for application deployment or systems administration tasks."
+
+With `fabric <http://www.fabfile.org/>`_ you are able to automate your server maintenance, e.g. run the the same tasks on different servers.
+
+:ref:`Read more ... <introfabric>`

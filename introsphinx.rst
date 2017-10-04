@@ -23,7 +23,8 @@ Generate Formulas
 ==================
 
 
-Formulas are generated with the latex syntax for formulas. In the `wikibooks <http://en.wikibooks.org/wiki/LaTeX/Mathematics>`_ about latex you can find an introduction about this topic.
+Formulas are generated with the latex syntax for formulas. In the `wikibooks <http://en.wikibooks.org/wiki/LaTeX/Mathematics>`_
+about latex you can find an introduction about this topic.
 In sphinx you can include inline math (e.g. the result of `:math:`x\\leftarrow y\\ x\\forall y\ x-y``  is
 :math:`x\leftarrow y\ x\forall y\ x-y` or display mode.
 Here an example::
@@ -219,12 +220,12 @@ The output is the following:
     pp.show()
 
 
-The extension `'matplotlib.sphinxext.plot_directive',` must be added to the `extensions` array in the conf.py configuration file.
+The extension `'matplotlib.sphinxext.plot_directive',` must be added to the `extensions` array in the `conf.py` configuration file.
 
 
 Overview of the sphinx syntax
 =============================
 
-This chapter is not ready yet.
+This chapter is not ready yet and it is very probably that it will be never ready...
 
-Sphinx has a very good tutorial  `Try it out <http://sphinx-doc.org/tutorial.html>`_ .
+Sphinx has a very good tutorial  `Try it out <http://sphinx-doc.org/tutorial.html>`_  ,so please use this.

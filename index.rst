@@ -1,7 +1,7 @@
 Welcome to my blog!
 =====================================
 
-In this articles I want to give a small introduction in some Python packages from the view of an engineer. 
+In this articles I want to give a small introduction in some Python packages from the view of an engineer.
 
 Contents:
 
@@ -18,8 +18,4 @@ Contents:
    introhdf.rst
    introjinja.rst
    introtwisted.rst
-
-
-
-
-
+   introfabric.rst

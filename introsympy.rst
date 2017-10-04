@@ -1,13 +1,13 @@
 .. _introsympy:
 
 ****************************************************
--Python Packages- Part 3: Sympy 
+-Python Packages- Part 3: Sympy
 ****************************************************
 
 `SymPy <http://sympy.org/en/index.html>`_ is a library for symbolic computation for (you are right...) Python.
 
-It includes features like basic symbolic arithmetic, calculus, algebra and discrete mathematics.To show you a small example, 
-I used a classical linear system of an one-dimensional movement of a mass  described with the Newton’s laws of motion which is 
+It includes features like basic symbolic arithmetic, calculus, algebra and discrete mathematics.To show you a small example,
+I used a classical linear system of an one-dimensional movement of a mass  described with the Newton’s laws of motion which is
 moving vertical between 2 walls, a spring and a damper.
 
 .. image:: _static/swing.png
@@ -15,7 +15,7 @@ moving vertical between 2 walls, a spring and a damper.
 Here is the equation in case of the balanced state (no more influence of the weight) :
 
 .. math::
-	m\cdot\ddot{z}(t)+d\cdot\dot{z}(t)+c\cdot z(t)=F(t) 
+	m\cdot\ddot{z}(t)+d\cdot\dot{z}(t)+c\cdot z(t)=F(t)
 
 F(t) is an external force.
 
@@ -37,11 +37,13 @@ So, we need the following first steps in Sympy:
 	pprint( F,  use_unicode= True)
 
 
-In the first line you can see the import of the necessary functions. In the next 3 lines, the different symbols for our calculation are defined. Now you are able to make different operations like integration or derivation of your functions without loosing the meaning of your different parameters and symbols.
+In the first line you can see the import of the necessary functions. In the next 3 lines, the different symbols for our calculation are defined.
+Now you are able to make different operations like integration or derivation of your functions without loosing the meaning of your different parameters and symbols.
 
-With the definition in line 8 you are setting your equation of the movement. With the .diff(t)  statement you are building the derivation of z(t). Further, .diff(t,t) is the second derivation.
+With the definition in line 8 you are setting your equation of the movement. With the `.diff(t)`  statement you are building the derivation of `z(t)`.
+Further, `.diff(t,t)` is the second derivation.
 
-In the last line you are printing out your solution of this equation in a more beautiful way (use_unicode=True):
+In the last line you are printing out your solution of this equation in a more beautiful way with activated unicode:
 
 .. image:: _static/first_F.png
 
