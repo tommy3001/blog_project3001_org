@@ -23,26 +23,25 @@ The details of the deviations are also not my interest.
 
 In Scipy is a function implemented to solve these problems for you. See the example below.
 
-
 .. code-block:: python
     :linenos:
 
-	import matplotlib.pyplot as pp
-	import numpy as np
-	from scipy.interpolate import splprep, splev
-	Px = [1.0,2.0,3.0,4.0,5.0,6.0,32.0,8.0,9.0]
-	Py = [5.0,2.0,3.0,9.0,5.0,25.0,7.0,8.0,20.0]
-	#generating of the b-spline
-	tckp,u = splprep([Px,Py],s=3,k=2,nest=-1)
-	# evaluating (x-y-representation) of the b-spline
-	Pxnew,Pynew = splev(np.linspace(0,1,200),tckp)
-	data,=pp.plot(Px,Py,'bo-',label='data')
-	fit,=pp.plot(Pxnew,Pynew,'r-',label='fit')
-	pp.legend()
-	pp.xlabel('x')
-	pp.ylabel('y')
-	pp.savefig('splprep.png')
-	pp.figure()
+    import matplotlib.pyplot as pp
+    import numpy as np
+    from scipy.interpolate import splprep, splev
+    Px = [1.0,2.0,3.0,4.0,5.0,6.0,32.0,8.0,9.0]
+    Py = [5.0,2.0,3.0,9.0,5.0,25.0,7.0,8.0,20.0]
+    #generating of the b-spline
+    tckp,u = splprep([Px,Py],s=3,k=2,nest=-1)
+    # evaluating (x-y-representation) of the b-spline
+    Pxnew,Pynew = splev(np.linspace(0,1,200),tckp)
+    data,=pp.plot(Px,Py,'bo-',label='data')
+    fit,=pp.plot(Pxnew,Pynew,'r-',label='fit')
+    pp.legend()
+    pp.xlabel('x')
+    pp.ylabel('y')
+    pp.savefig('splprep.png')
+    pp.figure()
 
 
 In line 1 is imported the package to plot the spline curve. In line 2 is imported the Numpy package for some array
