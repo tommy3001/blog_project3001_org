@@ -103,12 +103,13 @@ To calculate it in Python, you can do the following steps:
   pp.plot(t, S, color='red', lw=2)
   pp.savefig("plot.png",dpi=60)
 
-  n line 1 and 2 are the 2 necessary packages implemented. Matplotlib supports a lot of plotting
-  functions (line 13-15), while Numpy is used for the array, which is generated in line 11. In line 13
-  is the time frame for the plot. The range is from -6 to 6 seconds with a step size of 0.1 seconds.
-  the pp.plot() function is the Matplot call to generate the plot. The first parameter is the time-array
-  (x-Axes). The second parameter is the function to plot (y-Axes), in our case formula (1). With
-  pp.savefig the plot is saved in a file.
+
+In line 1 and 2 are the 2 necessary packages implemented. Matplotlib supports a lot of plotting
+functions (line 13-15), while Numpy is used for the array, which is generated in line 11. In line 13
+is the time frame for the plot. The range is from -6 to 6 seconds with a step size of 0.1 seconds.
+the pp.plot() function is the Matplot call to generate the plot. The first parameter is the time-array
+(x-Axes). The second parameter is the function to plot (y-Axes), in our case formula (1). With
+pp.savefig the plot is saved in a file.
 
 Here is the output of the plot:
 
@@ -126,24 +127,25 @@ Here is an example of a solver for linear matrix equations. In the figure you ca
 And here the code to solve this problem to get the current.
 
 .. code-block:: python
-    :linenos:
+  :linenos:
 
-    import matplotlib.pyplot as pp
-    import numpy as np
+  import matplotlib.pyplot as pp
+  import numpy as np
 
-    #Some example values
-    R_1=100;R_2=200;R_3=300;R_4=400;R_5=500
-    I_1=0.0;I_2=0.0;I_3=0.0
-    U_q1=50.0; U_q2=50.0
+  #Some example values
+  R_1=100;R_2=200;R_3=300;R_4=400;R_5=500
+  I_1=0.0;I_2=0.0;I_3=0.0
+  U_q1=50.0; U_q2=50.0
 
-    #definition of the array
-    R_mat = np.array([[1.,  -1., -1.],[0.,  -R_2,  R_4+R_5],[R_3+R_1,  R_2, 0]])
-    U_mat = np.array([0,U_q1,U_q2])
+  #definition of the array
+  R_mat = np.array([[1.,  -1., -1.],[0.,  -R_2,  R_4+R_5],[R_3+R_1,  R_2, 0]])
+  U_mat = np.array([0,U_q1,U_q2])
 
-    #numeric solution of the current
-    I_mat = np.linalg.solve(R_mat,U_mat)
+  #numeric solution of the current
+  I_mat = np.linalg.solve(R_mat,U_mat)
 
-    print I_mat
+  print I_mat
+
 
 In line 10 the matrices for the resistor and in line 11 the matrices for the voltage is generated. In
 line 14 the formula is solved to calculate the variables (in this case the current).
