@@ -87,7 +87,6 @@ In the figure you can see a model of a crankshaft. The aim is here to calculate 
 To calculate it in Python, you can do the following steps:
 
 .. code-block:: python
-  :linenos:
 
   import matplotlib.pyplot as pp
   import numpy as np
