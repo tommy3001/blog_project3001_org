@@ -3,20 +3,21 @@
 ****************************************************
 -Python Packages- Part 1: Numpy and Matplotlib
 ****************************************************
+Python is a fantastic programming tool. It has a simple syntax, a lot of additional libraries and
+scripts which are running out of the box. All you need is an installed Python interpreter and the
+used libraries. It runs under MS Windows, Mac, Linux and other operating systems. The scripting
+language is like the glue between different components and other programming languages. For
+example, you can call C/C++ functions with Cython inside Python scripts.
 
+Python claims to combine “remarkable power with very clear syntax” `[Python-docs] <http://docs.python.org/2/tutorial/index.html>`_
 
-Python is a fantastic programming tool. It has a simple syntax, a lot of additional libraries and these scripts are running out of the box.
-All you need is an installed Python interpreter and the used libraries. It runs under MS Windows, Mac, Linux and other. The scripting language
-is like the glue between different components and other programming languages. For example you can call C/C++ functions with Cython inside Python scripts.
-
-Python claims to combine "remarkable power with very clear syntax" `[Python-docs] <http://docs.python.org/2/tutorial/index.html>`_
-
-In this blog I want to show you some important tools and libraries. This is the first part of this topic. Here is is a introduction by example in the 2 packages.
+In this blog, I want to show you some important tools and libraries. This is the first part of this
+topic. Here is an introduction by example in the 2 packages.
 
 *  Numpy
 *  Matplotlib
 
-Calculation examples with visualization you can find in the project part ( project 1 and 2) .
+Calculation examples with visualization you can find in the project part (project 1 and 2).
 
 Numpy
 =======
@@ -61,7 +62,7 @@ It is nearly so fast as the C/C++ implementation, because Numpy calls internally
 Matplotlib
 ==========
 
-`Matplotlib <http://matplotlib.org>`_   is a python 2D and 3D plotting library which you can directly implement in your python programs. In the backside of this Web application it is also implemented.
+`Matplotlib <http://matplotlib.org>`_   is a python 2D and 3D plotting library which you can directly implement in your python programs.
 
 "You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc, with just a few lines of code. " [matplotlib]
 
@@ -103,10 +104,12 @@ To calculate it in Python, you can do the following steps:
 	pp.plot(t, S, color='red', lw=2)
 	pp.savefig("plot.png",dpi=60)
 
-In line 1 and 2 are the 2 necessary packages implemented. Matplotlib supports a lot of plotting functions (line 13-15), while Numpy is used for the array,
-which is generated in line 11. In line 13 is the time frame for the plot. The range is from -6 to 6 seconds with a step size of 0.1 seconds.
-The `pp.plot()` function is the Matplot call to generate the plot. The first parameter is the time-array (X-Axes). The second parameter is the
-function to plot (Y-Axes), in our case formula (1). With `pp.savefig`the plot is saved in a file.
+  n line 1 and 2 are the 2 necessary packages implemented. Matplotlib supports a lot of plotting
+  functions (line 13-15), while Numpy is used for the array, which is generated in line 11. In line 13
+  is the time frame for the plot. The range is from -6 to 6 seconds with a step size of 0.1 seconds.
+  the pp.plot() function is the Matplot call to generate the plot. The first parameter is the time-array
+  (x-Axes). The second parameter is the function to plot (y-Axes), in our case formula (1). With
+  pp.savefig the plot is saved in a file.
 
 Here is the output of the plot:
 
@@ -143,7 +146,8 @@ And here the code to solve this problem to get the current.
 
     print I_mat
 
-In line 10 the matrices for the resistor and in  line 11 the matrices for the voltage is generated. In line 14 the formula is solved to get the variables (in this case the current).
+In line 10 the matrices for the resistor and in line 11 the matrices for the voltage is generated. In
+line 14 the formula is solved to calculate the variables (in this case the current).
 
 The output is:
 
