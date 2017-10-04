@@ -87,22 +87,22 @@ In the figure you can see a model of a crankshaft. The aim is here to calculate 
 To calculate it in Python, you can do the following steps:
 
 .. code-block:: python
-    :linenos:
+  :linenos:
 
-	import matplotlib.pyplot as pp
-	import numpy as np
+  import matplotlib.pyplot as pp
+  import numpy as np
 
-	def k(t,lam, omega,l_1,l_2):
+  def k(t,lam, omega,l_1,l_2):
        		return l_2*(lam*np.cos(omega*t)+np.sqrt(1-(lam*lam*np.sin(omega*t)*np.sin(omega*t))))
 
-	l_1=1.0
-	l_2=5.0
-	omega = 4.0
-	lam = l_1 / l_2
-	t = np.arange(-6, 6, 0.1)
-	S = k(t,lam, omega,l_1,l_2)
-	pp.plot(t, S, color='red', lw=2)
-	pp.savefig("plot.png",dpi=60)
+  l_1=1.0
+  l_2=5.0
+  omega = 4.0
+  lam = l_1 / l_2
+  t = np.arange(-6, 6, 0.1)
+  S = k(t,lam, omega,l_1,l_2)
+  pp.plot(t, S, color='red', lw=2)
+  pp.savefig("plot.png",dpi=60)
 
   n line 1 and 2 are the 2 necessary packages implemented. Matplotlib supports a lot of plotting
   functions (line 13-15), while Numpy is used for the array, which is generated in line 11. In line 13
